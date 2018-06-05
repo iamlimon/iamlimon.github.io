@@ -1,3 +1,7 @@
+body {
+  font-family: 'Muli', Arial, sans-serif;
+  color: #252525; }
+
 .logo {
   width: 100px;
   display: block;

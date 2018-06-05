@@ -1,6 +1,7 @@
 @import "bootstrap/_functions.scss";
 @import "bootstrap/_variables.scss";
 @import "bootstrap/mixins/_breakpoints.scss";
+@import "_variables.scss";
 
 
 // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
@@ -17,7 +18,11 @@
 
 }
 
-// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+body {
+    font-family: 'Muli', Arial, sans-serif;
+    color: $logo-gray;
+}
+
 .logo {
   width: 100px;
   display: block;
