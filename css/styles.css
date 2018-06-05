@@ -12,9 +12,13 @@
 
 @media (min-width: 768px) {
   .logo {
-    margin-left: 0; }
+    margin-left: 0;
+    display: inline-block; }
 
   .name {
-    text-align: left; } }
+    text-align: left;
+    display: inline-block;
+    padding-left: 24px;
+    font-size: 24px; } }
 
 /*# sourceMappingURL=styles.css.map */

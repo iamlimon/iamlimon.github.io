@@ -2,6 +2,7 @@
 @import "bootstrap/_variables.scss";
 @import "bootstrap/mixins/_breakpoints.scss";
 
+
 // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
 @include media-breakpoint-up(sm) { 
 
@@ -33,8 +34,12 @@
 @include media-breakpoint-up(md) {
   .logo {
     margin-left: 0;
+    display: inline-block;
   }
   .name {
       text-align: left;
+      display: inline-block;
+      padding-left: 24px;
+      font-size: 24px;
   }
 }
