@@ -1,8 +1,20 @@
-.custom-class {
-  display: none; }
+.logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  padding: 24px 0; }
 
-@media (min-width: 576px) {
-  .custom-class {
-    display: block; } }
+.name {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .logo {
+    margin-left: 0; }
+
+  .name {
+    text-align: left; } }
 
 /*# sourceMappingURL=styles.css.map */

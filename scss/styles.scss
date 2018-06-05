@@ -17,11 +17,24 @@
 }
 
 // Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
-.custom-class {
-  display: none;
+.logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  padding: 24px 0;
 }
-@include media-breakpoint-up(sm) {
-  .custom-class {
-    display: block;
+.name {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    
+}
+@include media-breakpoint-up(md) {
+  .logo {
+    margin-left: 0;
+  }
+  .name {
+      text-align: left;
   }
 }
