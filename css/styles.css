@@ -1,0 +1,8 @@
+.custom-class {
+  display: none; }
+
+@media (min-width: 576px) {
+  .custom-class {
+    display: block; } }
+
+/*# sourceMappingURL=styles.css.map */
