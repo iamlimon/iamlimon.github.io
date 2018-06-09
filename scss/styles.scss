@@ -34,8 +34,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-    
-}
+  }
+  .portfolio-container {
+    height: 100px;
+    background: #eee;
+ }
 @include media-breakpoint-up(md) {
   .logo {
     margin-left: 0;
