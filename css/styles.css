@@ -1,6 +1,13 @@
 body {
   font-family: 'Muli', Arial, sans-serif;
-  color: #252525; }
+  background: #252525;
+  color: #ffffff;
+  background: #2b5876;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4e4376, #2b5876);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .logo {
   width: 100px;
@@ -15,8 +22,22 @@ body {
   text-align: center; }
 
 .portfolio-container {
-  height: 100px;
-  background: #eee; }
+  height: 400px;
+  background: #252525; }
+
+.navigation ul {
+  list-style: none;
+  margin-top: 24px; }
+
+.navigation ul li {
+  display: inline;
+  padding: 10px;
+  text-align: right; }
+
+.navigation ul li a {
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: uppercase; }
 
 @media (min-width: 768px) {
   .logo {

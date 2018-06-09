@@ -2,6 +2,7 @@
 @import "bootstrap/_variables.scss";
 @import "bootstrap/mixins/_breakpoints.scss";
 @import "_variables.scss";
+@import "_mixins.scss";
 
 
 // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
@@ -20,7 +21,12 @@
 
 body {
     font-family: 'Muli', Arial, sans-serif;
-    color: $logo-gray;
+    background: $gray;
+    color: $white;
+    background: #2b5876;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .logo {
@@ -36,8 +42,22 @@ body {
     text-align: center;
   }
   .portfolio-container {
-    height: 100px;
-    background: #eee;
+    height: 400px;
+    background: $gray;
+ }
+ .navigation ul{
+    list-style: none;
+    margin-top: 24px;
+ }
+ .navigation ul li {
+   display: inline;
+   padding: 10px;
+   text-align: right;
+ }
+ .navigation ul li a {
+   color: $white;
+   font-size: 20px;
+   text-transform: uppercase;
  }
 @include media-breakpoint-up(md) {
   .logo {
