@@ -23,7 +23,8 @@ body {
 
 .portfolio-container {
   height: 400px;
-  background: #252525; }
+  background-color: #252525;
+  background-color: rgba(37, 37, 37, 0.5); }
 
 .navigation ul {
   list-style: none;
