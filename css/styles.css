@@ -8,7 +8,7 @@ body {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4e4376, #2b5876);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-
+}
 .btn-custom {
   padding: 8px 32px;
   color: #ffffff;
@@ -50,14 +50,18 @@ body {
 
 .overlay {
   width: 100%;
-  background: #44A08D;
+  background: #4568DC;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #093637, #44A08D);
+  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #093637, #44A08D);
+  background: linear-gradient(to right, #B06AB3, #4568DC);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 0.7;
+  transition: .5s ease;
   height: 100%; }
+
+.overlay:hover {
+  opacity: 1; }
 
 #dev {
   background: url("../assets/coding-background.jpg") no-repeat center right;
@@ -90,10 +94,10 @@ body {
   text-align: right; }
 
 .navigation ul li a {
-  color: #36c6ae;
+  color: #ffffff;
   font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 300;
+  text-transform: uppercase; }
 
 #footer, #showcase, #body {
   padding-top: 40px;
@@ -113,6 +117,9 @@ body {
   .btn-custom {
     width: 30%;
     margin-right: 24px;
-    display: inline-block; } }
+    display: inline-block; }
+
+  #body p {
+    font-size: 24px; } }
 
 /*# sourceMappingURL=styles.css.map */
