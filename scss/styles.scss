@@ -23,14 +23,10 @@ body {
 // END Body Styles
 
 #hero {
-  height: 100vh;
+  height: 430px;
+  @include media-breakpoint-up(md) { height: 100vh};
 }
 
-.hero-image {
-  width: 32%;
-  display: block;
-  margin: 0 auto;
-}
 
 @include keyframes(fadein) {
   0%   {opacity: 0; }
@@ -43,9 +39,10 @@ body {
   font-size: 25px;
   position: relative;
   z-index: -1;
-  margin-top: 202px;
+  margin-top: 64px;
   font-family: 'Eczar', serif;
   @include animation(fadein, 5s);
+  @include media-breakpoint-up(md) { margin-top: 202px;};
   span {
     font-size: 15px;
     text-align: right;
@@ -53,6 +50,7 @@ body {
   }
 }
 
+// Button //
 .btn-custom {
   padding: 8px 32px;
   color: $white;
@@ -68,6 +66,7 @@ body {
       display: inline-block;
   }
 }
+// Button End //
 
 .logo {
   width: 100px;
@@ -81,6 +80,7 @@ body {
       width: 50px;
     }
 }
+
 .name {
   font-size: 18px;
   text-transform: uppercase;
@@ -94,54 +94,52 @@ body {
       font-size: 24px;
     }
 }
-.portfolio-container {
-  height: 400px;
-  @include rgba-background($gray, 0.5);
-  border-radius: 10px;
-}
 
-.overlay {
-  width: 100%;
-  @include linear-gradient(to right, #2a0845, #3494E6, #3494E6);
-  opacity: 0.7;
-  transition: .5s ease;
-  height: 100%;
-  border-radius: 10px;
-  &:hover {
-    opacity: .9;
+
+
+
+// Showcase Section //
+#showcase {
+  #dev {
+    @include background-image(url("../assets/coding-background.jpg") no-repeat center right);
   }
-
-  p {
-    color: $white;
-    font-size: 31px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
- }
+  #design {
+    @include background-image(url("../assets/design-background.jpg") no-repeat center right);
+  }
+  div[class ^= "col-"] {
+    padding: 0;
+  }
+  .showcase-container {
+    height: 400px;
+    @include rgba-background($gray, 0.5);
+    border-radius: 10px;
+  }
+  .showcase-overlay {
+    width: 100%;
+    opacity: 0.7;
+    transition: .5s ease;
+    height: 100%;
+    border-radius: 10px;
+    @include linear-gradient(to right, #2a0845, #3494E6, #3494E6);
+    &:hover {
+      opacity: .9;
+    }
+  
+    p {
+      color: $white;
+      font-size: 31px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+   }
+  }
 }
-
-#showcase div[class ^= "col-"] {
-  padding: 0;
-}
-
-#dev {
-  @include background-image(url("../assets/coding-background.jpg") no-repeat center right);
-}
-#design {
-  @include background-image(url("../assets/design-background.jpg") no-repeat center right);
-}
-
-
-
-#footer, #showcase, #body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
+// END Showcase Section //
 
 // Navigation 
 .navigation {
@@ -163,4 +161,9 @@ body {
   }
 }
 // END Navigation
+
+#footer, #showcase, #body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 

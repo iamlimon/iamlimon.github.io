@@ -26,12 +26,10 @@ body {
       font-weight: bold; }
 
 #hero {
-  height: 100vh; }
-
-.hero-image {
-  width: 32%;
-  display: block;
-  margin: 0 auto; }
+  height: 430px; }
+  @media (min-width: 768px) {
+    #hero {
+      height: 100vh; } }
 
 @-webkit-keyframes fadein {
   0% {
@@ -59,7 +57,7 @@ body {
   font-size: 25px;
   position: relative;
   z-index: -1;
-  margin-top: 202px;
+  margin-top: 64px;
   font-family: 'Eczar', serif;
   -webkit-animation: fadein 5s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -70,6 +68,9 @@ body {
   -o-animation: fadein 5s;
   /* Opera < 12.1 */
   animation: fadein 5s; }
+  @media (min-width: 768px) {
+    .headline {
+      margin-top: 202px; } }
   .headline span {
     font-size: 15px;
     text-align: right;
@@ -140,27 +141,40 @@ body {
       padding-left: 24px;
       font-size: 24px; } }
 
-.portfolio-container {
+#showcase #dev {
+  background: url("../assets/coding-background.jpg") no-repeat center right;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
+#showcase #design {
+  background: url("../assets/design-background.jpg") no-repeat center right;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
+#showcase div[class^="col-"] {
+  padding: 0; }
+#showcase .showcase-container {
   height: 400px;
   background-color: #252525;
   background-color: rgba(37, 37, 37, 0.5);
   border-radius: 10px; }
-
-.overlay {
+#showcase .showcase-overlay {
   width: 100%;
+  opacity: 0.7;
+  transition: .5s ease;
+  height: 100%;
+  border-radius: 10px;
   background: #3494E6;
   background: -webkit-linear-gradient(to right, #2a0845, #3494E6);
   background: -moz-linear-gradient(to right, #2a0845, #3494E6);
   background: -ms-linear-gradient(to right, #2a0845, #3494E6);
   background: -o-linear-gradient(to right, #2a0845, #3494E6);
-  background: linear-gradient(to right, #2a0845, #3494E6);
-  opacity: 0.7;
-  transition: .5s ease;
-  height: 100%;
-  border-radius: 10px; }
-  .overlay:hover {
+  background: linear-gradient(to right, #2a0845, #3494E6); }
+  #showcase .showcase-overlay:hover {
     opacity: .9; }
-  .overlay p {
+  #showcase .showcase-overlay p {
     color: #ffffff;
     font-size: 31px;
     font-weight: 300;
@@ -171,27 +185,6 @@ body {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center; }
-
-#showcase div[class^="col-"] {
-  padding: 0; }
-
-#dev {
-  background: url("../assets/coding-background.jpg") no-repeat center right;
-  -webkit-background-size: cover;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; }
-
-#design {
-  background: url("../assets/design-background.jpg") no-repeat center right;
-  -webkit-background-size: cover;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; }
-
-#footer, #showcase, #body {
-  padding-top: 40px;
-  padding-bottom: 40px; }
 
 .navigation ul {
   list-style: none;
@@ -206,5 +199,9 @@ body {
       font-size: 20px;
       font-weight: 300;
       text-transform: uppercase; }
+
+#footer, #showcase, #body {
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 /*# sourceMappingURL=styles.css.map */
