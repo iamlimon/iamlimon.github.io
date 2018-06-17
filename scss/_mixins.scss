@@ -18,3 +18,34 @@
   -o-animation: $effect $time; /* Opera < 12.1 */
    animation: $effect $time;
 }
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+      @content;
+  }
+  @-moz-keyframes #{$animationName} {
+      @content;
+  }
+  @-o-keyframes #{$animationName} {
+      @content;
+  }
+  @keyframes #{$animationName} {
+      @content;
+  }
+}
+
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  -ms-box-shadow: $property;
+  -o-box-shadow: $property;
+  box-shadow:$property;
+}
+@mixin linear-gradient( $direction, $start, $end, $fallback) {
+  background: $fallback;
+  background: -webkit-linear-gradient($direction, $start, $end);
+  background: -moz-linear-gradient($direction, $start, $end);
+  background: -ms-linear-gradient($direction, $start, $end);
+  background: -o-linear-gradient($direction, $start, $end);
+  background: linear-gradient($direction, $start, $end);
+}
