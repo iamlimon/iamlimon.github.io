@@ -141,50 +141,61 @@ body {
       padding-left: 24px;
       font-size: 24px; } }
 
-#showcase #dev {
-  background: url("../assets/coding-background.jpg") no-repeat center right;
-  -webkit-background-size: cover;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; }
-#showcase #design {
-  background: url("../assets/design-background.jpg") no-repeat center right;
-  -webkit-background-size: cover;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; }
-#showcase div[class^="col-"] {
-  padding: 0; }
-#showcase .showcase-container {
-  height: 400px;
-  background-color: #252525;
-  background-color: rgba(37, 37, 37, 0.5);
-  border-radius: 10px; }
-#showcase .showcase-overlay {
-  width: 100%;
-  opacity: 0.7;
-  transition: .5s ease;
-  height: 100%;
-  border-radius: 10px;
-  background: #3494E6;
-  background: -webkit-linear-gradient(to right, #2a0845, #3494E6);
-  background: -moz-linear-gradient(to right, #2a0845, #3494E6);
-  background: -ms-linear-gradient(to right, #2a0845, #3494E6);
-  background: -o-linear-gradient(to right, #2a0845, #3494E6);
-  background: linear-gradient(to right, #2a0845, #3494E6); }
-  #showcase .showcase-overlay:hover {
-    opacity: .9; }
-  #showcase .showcase-overlay p {
-    color: #ffffff;
-    font-size: 31px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center; }
+#feature {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  @media (min-width: 768px) {
+    #feature .col-12 {
+      border-left: 2px solid;
+      padding-left: 25px; } }
+
+#showcase {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  #showcase #dev {
+    background: url("../assets/coding-background.jpg") no-repeat center right;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; }
+  #showcase #design {
+    background: url("../assets/design-background.jpg") no-repeat center right;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; }
+  #showcase div[class^="col-"] {
+    padding: 0; }
+  #showcase .showcase-container {
+    height: 400px;
+    background-color: #252525;
+    background-color: rgba(37, 37, 37, 0.5);
+    border-radius: 10px; }
+  #showcase .showcase-overlay {
+    width: 100%;
+    opacity: 0.7;
+    transition: .5s ease;
+    height: 100%;
+    border-radius: 10px;
+    background: #3494E6;
+    background: -webkit-linear-gradient(to right, #2a0845, #3494E6);
+    background: -moz-linear-gradient(to right, #2a0845, #3494E6);
+    background: -ms-linear-gradient(to right, #2a0845, #3494E6);
+    background: -o-linear-gradient(to right, #2a0845, #3494E6);
+    background: linear-gradient(to right, #2a0845, #3494E6); }
+    #showcase .showcase-overlay:hover {
+      opacity: .9; }
+    #showcase .showcase-overlay p {
+      color: #ffffff;
+      font-size: 31px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center; }
 
 .navigation ul {
   list-style: none;
@@ -200,7 +211,8 @@ body {
       font-weight: 300;
       text-transform: uppercase; }
 
-#footer, #showcase, #body {
+#footer p {
+  font-size: 14px;
   padding-top: 40px;
   padding-bottom: 40px; }
 

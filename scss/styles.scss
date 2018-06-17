@@ -95,11 +95,24 @@ body {
     }
 }
 
-
+// Feature //
+#feature {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .col-12 {
+    @include media-breakpoint-up(md) {
+      border-left: 2px solid;
+      padding-left: 25px;
+    }
+  }
+}
+// End Feature //
 
 
 // Showcase Section //
 #showcase {
+  padding-top: 40px;
+  padding-bottom: 40px;
   #dev {
     @include background-image(url("../assets/coding-background.jpg") no-repeat center right);
   }
@@ -124,7 +137,6 @@ body {
     &:hover {
       opacity: .9;
     }
-  
     p {
       color: $white;
       font-size: 31px;
@@ -162,8 +174,12 @@ body {
 }
 // END Navigation
 
-#footer, #showcase, #body {
-  padding-top: 40px;
-  padding-bottom: 40px;
+// Footer //
+#footer {
+  p{
+    font-size: 14px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
-
+// End Footer //
