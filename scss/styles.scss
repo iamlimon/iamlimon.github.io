@@ -5,7 +5,7 @@
 @import "_mixins.scss";
 @import "_particles.scss";
 
-
+// Body Styles
 body {
     font-family: 'Muli', Arial, sans-serif;
     background: $gray;
@@ -13,22 +13,31 @@ body {
     @include linear-gradient(to right, #4e4376, #2b5876, #2b5876);
     p {
       font-weight: 300;
+      font-size: 24px;
       span {
         color: $teal;
         font-weight: bold;
       }
     }
 }
+// END Body Styles
 
 #hero {
   height: 100vh;
 }
+
+.hero-image {
+  width: 32%;
+  display: block;
+  margin: 0 auto;
+}
+
 @include keyframes(fadein) {
   0%   {opacity: 0; }
   100% { opacity: .9 }
 }
 
-h1.headline {
+.headline {
   color: rgba(255,255,255, .9);
   letter-spacing: 4px;
   font-size: 25px;
@@ -37,33 +46,40 @@ h1.headline {
   margin-top: 202px;
   font-family: 'Eczar', serif;
   @include animation(fadein, 5s);
+  span {
+    font-size: 15px;
+    text-align: right;
+    line-height: 49px;
+  }
 }
-.headline span {
-  font-size: 15px;
-  text-align: right;
-  line-height: 49px;
-}
+
 .btn-custom {
   padding: 8px 32px;
   color: $white;
-  @include linear-gradient(to left, #3399ff, #3494E6, #3494E6);
   border: none;
   border-radius: 8px;
   width: 100%;
   margin: 24px 0;
+  @include linear-gradient(to left, #3399ff, #3494E6, #3494E6);
   @include box-shadow(-2px 10px 37px -12px rgba(246,71,255,0.21));
+  @include media-breakpoint-up(md) {
+      width: 30%;
+      margin-right: 24px;
+      display: inline-block;
+  }
 }
-.hero-image {
-  width: 32%;
-  display: block;
-  margin: 0 auto;
-}
+
 .logo {
   width: 100px;
   display: block;
   margin: 0 auto;
   padding: 24px 0;
   @include animation(fadein, 5s);
+  @include media-breakpoint-up(md) {
+      margin-left: 0;
+      display: inline-block;
+      width: 50px;
+    }
 }
 .name {
   font-size: 18px;
@@ -71,12 +87,19 @@ h1.headline {
   letter-spacing: 2px;
   text-align: center;
   @include animation(fadein, 5s);
+  @include media-breakpoint-up(md) {
+      text-align: left;
+      display: inline-block;
+      padding-left: 24px;
+      font-size: 24px;
+    }
 }
 .portfolio-container {
   height: 400px;
   @include rgba-background($gray, 0.5);
   border-radius: 10px;
 }
+
 .overlay {
   width: 100%;
   @include linear-gradient(to right, #2a0845, #3494E6, #3494E6);
@@ -84,9 +107,12 @@ h1.headline {
   transition: .5s ease;
   height: 100%;
   border-radius: 10px;
-}
-.overlay p {
-    color: white;
+  &:hover {
+    opacity: .9;
+  }
+
+  p {
+    color: $white;
     font-size: 31px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -96,84 +122,45 @@ h1.headline {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+ }
 }
+
 #showcase div[class ^= "col-"] {
   padding: 0;
 }
-.overlay:hover {
-  opacity: .9;
-}
+
 #dev {
-  background: url("../assets/coding-background.jpg") no-repeat center right;
-    -webkit-background-size: cover; 
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  @include background-image(url("../assets/coding-background.jpg") no-repeat center right);
 }
 #design {
-  background: url("../assets/mockup1.jpg") no-repeat center right;
-    -webkit-background-size: cover; 
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  @include background-image(url("../assets/design-background.jpg") no-repeat center right);
 }
-#animation {
-  background: url("../assets/animation.png") no-repeat center right;
-    -webkit-background-size: cover; 
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-.navigation ul{
-  list-style: none;
-  margin-top: 24px;
-  display: none;
-}
-.navigation ul li {
-  display: inline;
-  padding: 10px;
-  text-align: right;
-}
-.navigation ul li a {
-  color: $white;
-  font-size: 20px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
+
+
+
 #footer, #showcase, #body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-@include media-breakpoint-up(sm) { 
 
+// Navigation 
+.navigation {
+  ul{
+    list-style: none;
+    margin-top: 24px;
+    display: none;
+    li {
+      display: inline;
+      padding: 10px;
+      text-align: right;
+      a {
+        color: $white;
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
-//Medium Styles
-@include media-breakpoint-up(md) {
-.logo {
-  margin-left: 0;
-  display: inline-block;
-}
-.name {
-  text-align: left;
-  display: inline-block;
-  padding-left: 24px;
-  font-size: 24px;
-}
-.btn-custom {
-  width: 30%;
-  margin-right: 24px;
-  display: inline-block;
-}
-.logo {
-  width: 50px;
-}
-#body p {
-  font-size: 24px;
-}
-}
-@include media-breakpoint-up(lg) { 
+// END Navigation
 
-}
-@include media-breakpoint-up(xl) { 
-
-}

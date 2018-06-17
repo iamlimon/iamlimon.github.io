@@ -49,3 +49,10 @@
   background: -o-linear-gradient($direction, $start, $end);
   background: linear-gradient($direction, $start, $end);
 }
+@mixin background-image($property) {
+  background: $property;
+    -webkit-background-size: cover; 
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
