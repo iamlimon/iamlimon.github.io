@@ -49,39 +49,39 @@ h1.headline {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: .9; } }
 /* Firefox < 16 */
 @-moz-keyframes fadein {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: .9; } }
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: .9; } }
 /* Internet Explorer */
 @-ms-keyframes fadein {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: .9; } }
 /* Opera < 12.1 */
 @-o-keyframes fadein {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
+    opacity: .9; } }
 .btn-custom {
   padding: 8px 32px;
   color: #ffffff;
   background: #3494E6;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #EC6EAD, #3494E6);
+  background: -webkit-linear-gradient(to left, #3399ff, #3494E6);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #EC6EAD, #3494E6);
+  background: linear-gradient(to left, #3399ff, #3494E6);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: none;
   border-radius: 8px;
@@ -111,22 +111,39 @@ h1.headline {
 .portfolio-container {
   height: 500px;
   background-color: #252525;
-  background-color: rgba(37, 37, 37, 0.5); }
+  background-color: rgba(37, 37, 37, 0.5);
+  border-radius: 10px; }
 
 .overlay {
   width: 100%;
-  background: #4568DC;
+  background: #3399ff;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+  background: -webkit-linear-gradient(to right, #2a0845, #3399ff);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #B06AB3, #4568DC);
+  background: linear-gradient(to right, #2a0845, #3399ff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 0.7;
   transition: .5s ease;
-  height: 100%; }
+  height: 100%;
+  border-radius: 10px; }
+
+.overlay p {
+  color: white;
+  font-size: 31px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; }
+
+#showcase div[class^="col-"] {
+  padding: 0; }
 
 .overlay:hover {
-  opacity: 1; }
+  opacity: .9; }
 
 #dev {
   background: url("../assets/coding-background.jpg") no-repeat center right;
