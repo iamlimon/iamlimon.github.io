@@ -10,3 +10,11 @@
   background-color: $hexcolor;
   background-color: rgba($hexcolor, $opacity); 
 }
+
+@mixin animation($effect, $time) {
+  -webkit-animation: $effect $time; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: $effect $time; /* Firefox < 16 */
+  -ms-animation: $effect $time; /* Internet Explorer */
+  -o-animation: $effect $time; /* Opera < 12.1 */
+   animation: $effect $time;
+}

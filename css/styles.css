@@ -19,6 +19,13 @@ body {
   background: linear-gradient(to right, #4e4376, #2b5876);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
+#body p {
+  font-weight: 300; }
+
+#body p span {
+  color: #36c6ae;
+  font-weight: bold; }
+
 #hero {
   height: 100vh; }
 
@@ -109,7 +116,7 @@ h1.headline {
   text-align: center; }
 
 .portfolio-container {
-  height: 500px;
+  height: 400px;
   background-color: #252525;
   background-color: rgba(37, 37, 37, 0.5);
   border-radius: 10px; }
