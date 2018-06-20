@@ -8,6 +8,74 @@
   background-size: cover;
   background-position: 50% 50%; }
 
+@media (min-width: 768px) {
+  .container {
+    padding-left: 180px; } }
+
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-left: 215px; } }
+
+#menu .mobile-bar {
+  background: #333;
+  text-align: center;
+  padding: 8px 0;
+  position: relative;
+  z-index: 1; }
+  @media (min-width: 768px) {
+    #menu .mobile-bar {
+      display: none; } }
+  #menu .mobile-bar .name {
+    color: #36c6ae;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 0; }
+  #menu .mobile-bar .title {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 0; }
+  #menu .mobile-bar .menu-icon {
+    width: 35px;
+    position: absolute;
+    top: 25px;
+    right: 25px; }
+#menu .aside {
+  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.9);
+  width: 190px;
+  height: 100vh;
+  top: 0;
+  color: #ffffff;
+  position: fixed;
+  z-index: 3;
+  display: none;
+  -webkit-box-shadow: 13px 0px 50px -6px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 13px 0px 50px -6px rgba(0, 0, 0, 0.26);
+  box-shadow: 13px 0px 50px -6px rgba(0, 0, 0, 0.26); }
+  @media (min-width: 768px) {
+    #menu .aside {
+      display: block; } }
+  #menu .aside .name, #menu .aside .title {
+    text-align: center;
+    padding-top: 23px;
+    line-height: 31px;
+    color: #36c6ae;
+    margin-bottom: 0; }
+  #menu .aside .title {
+    color: #fff;
+    padding-top: 0;
+    font-size: 14px;
+    margin-bottom: 10px; }
+  #menu .aside ul {
+    list-style: none;
+    border-top: 1px solid #fff; }
+    #menu .aside ul .menu-item {
+      font-size: 18px;
+      margin: 15px 0; }
+      #menu .aside ul .menu-item a {
+        color: #fff; }
+
 body {
   font-family: 'Muli', Arial, sans-serif;
   background: #252525;
@@ -25,10 +93,10 @@ body {
       color: #36c6ae;
       font-weight: bold; }
 
-#hero {
+#header {
   height: 430px; }
   @media (min-width: 768px) {
-    #hero {
+    #header {
       height: 100vh; } }
 
 @-webkit-keyframes fadein {
@@ -54,7 +122,7 @@ body {
 .headline {
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: 4px;
-  font-size: 25px;
+  font-size: 40px;
   position: relative;
   z-index: -1;
   margin-top: 64px;
@@ -70,7 +138,7 @@ body {
   animation: fadein 5s; }
   @media (min-width: 768px) {
     .headline {
-      margin-top: 202px; } }
+      margin-top: 200px; } }
   .headline span {
     font-size: 15px;
     text-align: right;
@@ -120,7 +188,7 @@ body {
       display: inline-block;
       width: 50px; } }
 
-.name {
+.name2 {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -135,7 +203,7 @@ body {
   /* Opera < 12.1 */
   animation: fadein 5s; }
   @media (min-width: 768px) {
-    .name {
+    .name2 {
       text-align: left;
       display: inline-block;
       padding-left: 24px;
