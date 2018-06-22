@@ -23,18 +23,18 @@ $(function () {
         console.log("clicked");
         // use cached object instead of searching
         slideout.animate({
-            right: '0px'
+            left: '0px'
         }, {
             queue: false,
-            duration: 500
+            duration: 200
         });
     }, function () {
         // use cached object instead of searching        
         slideout.animate({
-            right: '-300px'
+            left: '-300'
         }, {
             queue: false,
-            duration: 500
+            duration: 200
         });
     });
 });

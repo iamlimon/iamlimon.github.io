@@ -25,13 +25,13 @@
     #header {
       height: 800px; } }
   #header .headline {
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     letter-spacing: 4px;
     font-size: 22px;
     position: relative;
     z-index: -1;
     margin-top: 64px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
     -webkit-animation: fadein 5s;
     /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 5s;
@@ -46,10 +46,13 @@
         margin-top: 200px;
         font-size: 40px; } }
     #header .headline span {
-      font-size: 15px;
-      text-align: right;
-      padding-top: 20px;
-      display: block; }
+      color: #a5cc82;
+      font-weight: 700; }
+  #header .headline-p {
+    font-size: 15px;
+    text-align: right;
+    padding-top: 20px;
+    display: block; }
 
 @-webkit-keyframes fadein {
   0% {
@@ -82,7 +85,7 @@
     #menu .mobile-bar {
       display: none; } }
   #menu .mobile-bar .name {
-    color: #36c6ae;
+    color: #a5cc82;
     font-weight: 500;
     font-size: 22px;
     margin-bottom: 0; }
@@ -104,22 +107,29 @@
   top: 0;
   color: #ffffff;
   position: fixed;
+  padding-top: 60px;
   z-index: 3;
-  display: none;
+  display: block;
+  left: -300px;
   -webkit-box-shadow: 13px 0px 50px -6px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 13px 0px 50px -6px rgba(0, 0, 0, 0.26);
   box-shadow: 13px 0px 50px -6px rgba(0, 0, 0, 0.26); }
   @media (min-width: 768px) {
     #menu .aside {
-      display: block; } }
+      left: 0 !important;
+      padding-top: 0; } }
   #menu .aside .name, #menu .aside .title {
     text-align: left;
     padding-top: 23px;
     padding-left: 30px;
     line-height: 36px;
     font-size: 30px;
-    color: #36c6ae;
-    margin-bottom: 0; }
+    color: #a5cc82;
+    margin-bottom: 0;
+    display: none; }
+    @media (min-width: 768px) {
+      #menu .aside .name, #menu .aside .title {
+        display: block; } }
   #menu .aside .title {
     color: #fff;
     padding-top: 0;
@@ -127,8 +137,10 @@
     margin-bottom: 10px; }
   #menu .aside ul {
     padding-left: 10px;
-    list-style: none;
-    border-top: 1px solid #fff; }
+    list-style: none; }
+    @media (min-width: 768px) {
+      #menu .aside ul {
+        border-top: 1px solid #fff; } }
     #menu .aside ul .menu-item {
       font-size: 18px;
       margin: 15px 0; }
@@ -148,7 +160,7 @@
       width: 35px; }
 
 body {
-  font-family: 'Muli', Arial, sans-serif;
+  font-family: "Lato", sans-serif;
   background: #252525;
   color: #ffffff;
   background: #2b5876;
@@ -161,7 +173,7 @@ body {
     font-weight: 300;
     font-size: 24px; }
     body p span {
-      color: #36c6ae;
+      color: #a5cc82;
       font-weight: bold; }
 
 .btn-custom {

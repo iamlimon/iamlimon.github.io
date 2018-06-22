@@ -22,26 +22,31 @@
   height: 350px;
   @include media-breakpoint-up(md) { height: 800px};
   .headline {
-    color: rgba(255,255,255, .9);
+    color: rgba(255,255,255, 1);
     letter-spacing: 4px;
     font-size: 22px;
     position: relative;
     z-index: -1;
     margin-top: 64px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
     @include animation(fadein, 5s);
     @include media-breakpoint-up(md) { 
       margin-top: 200px;
       font-size: 40px;
     };
     span {
+      color: $teal;
+      font-weight: 700;
+    }
+  };
+    .headline-p {
       font-size: 15px;
       text-align: right;
       padding-top: 20px;
       display: block;
-    }
-  }
-}
+    };
+  };
+
 @include keyframes(fadein) {
   0%   {opacity: 0; }
   100% { opacity: .9 }
@@ -89,12 +94,17 @@
     top: 0;
     color: #ffffff;
     position: fixed;
+    padding-top: 60px;
     z-index: 3;
-    display: none;
+    display: block;
+    left: -300px;
     -webkit-box-shadow: 13px 0px 50px -6px rgba(0,0,0,0.26);
     -moz-box-shadow: 13px 0px 50px -6px rgba(0,0,0,0.26);
     box-shadow: 13px 0px 50px -6px rgba(0,0,0,0.26);
-    @include media-breakpoint-up(md) { display: block;};
+    @include media-breakpoint-up(md) { 
+    left: 0 !important;
+    padding-top: 0;
+    };
     .name, .title {
       text-align: left;
       padding-top: 23px;
@@ -103,6 +113,8 @@
       font-size: 30px;
       color: $teal;
       margin-bottom: 0;
+      display: none;
+      @include media-breakpoint-up(md) { display: block;};
     }
     .title {
       color: #fff;
@@ -113,7 +125,7 @@
     ul {
       padding-left: 10px;
       list-style: none;
-      border-top: 1px solid #fff;
+      @include media-breakpoint-up(md) { border-top: 1px solid #fff;};
       .menu-item {
         font-size: 18px;
         margin: 15px 0;
@@ -147,7 +159,7 @@
 // Body Styles //
 //=====================//
 body {
-    font-family: 'Muli', Arial, sans-serif;
+    font-family: $main-font;
     background: $gray;
     color: $white;
     @include linear-gradient(to right, #4e4376, #2b5876, #2b5876);
@@ -217,7 +229,9 @@ body {
     }
 }
 
-// Feature //
+//=====================//
+// Feature Styles //
+//=====================//
 #feature {
   padding-top: 40px;
   padding-bottom: 100px;
@@ -228,10 +242,14 @@ body {
     }
   }
 }
-// End Feature //
+//=====================//
+// End Feature Styles //
+//=====================//
 
 
-// Showcase Section //
+///=====================//
+// Showcase Styles //
+//=====================//
 #showcase {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -273,9 +291,13 @@ body {
    }
   }
 }
-// END Showcase Section //
+//=====================//
+// End Showcase Styles //
+//=====================//
 
-// Navigation 
+//=====================//
+// Navigation Styles //
+//=====================//
 .navigation {
   ul{
     list-style: none;
@@ -294,7 +316,9 @@ body {
     }
   }
 }
-// END Navigation
+//=====================//
+// End Navigation Styles //
+//=====================//
 
 //=====================//
 // Skills Styles //
