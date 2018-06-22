@@ -3,13 +3,13 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: #035249;
+        stroke: #ffffff;
         stroke-linejoin: round;
         stroke-width: 0.7px;
       }
 
       .cls-2 {
-        fill: #035249;
+        fill: #ffffff;
         opacity: 0.2;
       }
     </style>

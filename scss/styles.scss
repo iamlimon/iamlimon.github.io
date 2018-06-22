@@ -5,19 +5,21 @@
 @import "_mixins.scss";
 @import "_particles.scss";
 
-
 .container {
   @include media-breakpoint-up(md) { padding-left:180px;};
 }
 .container-fluid {
   @include media-breakpoint-up(md) { padding-left:215px;};
 }
+
+//=====================//
 // Header Styles //
+//=====================//
 #particle-js {
   height: 100vh;
 }
 #header {
-  height: 430px;
+  height: 350px;
   @include media-breakpoint-up(md) { height: 800px};
   .headline {
     color: rgba(255,255,255, .9);
@@ -26,7 +28,7 @@
     position: relative;
     z-index: -1;
     margin-top: 64px;
-    font-family: 'Eczar', serif;
+    font-family: 'Nunito Sans', sans-serif;
     @include animation(fadein, 5s);
     @include media-breakpoint-up(md) { 
       margin-top: 200px;
@@ -44,9 +46,15 @@
   0%   {opacity: 0; }
   100% { opacity: .9 }
 }
-
+//=====================//
 // End Header Styles //
+//=====================//
+
+
+
+//=====================//
 // Menu Styles //
+//=====================//
 #menu {
   .mobile-bar {
     @include rgba-background(#21252C, .85);
@@ -117,10 +125,27 @@
         margin-left: 17px;
       }
     }
+    .aside-social {
+      width: 30px;
+      margin: 32px 8px;
+      display: inline-block;
+      &:first-of-type {
+        margin-left: 25px;
+      }
+      &:hover {
+        width: 35px;
+      }
+    }
   }
 }
-// END Menu Styles //
-// Body Styles
+//=====================//
+// End Menu Styles //
+//=====================//
+
+
+//=====================//
+// Body Styles //
+//=====================//
 body {
     font-family: 'Muli', Arial, sans-serif;
     background: $gray;
@@ -135,13 +160,17 @@ body {
       }
     }
 }
-// END Body Styles
+//=====================//
+// End Body Styles //
+//=====================//
 
 
 
 
 
-// Button //
+//=====================//
+// Button Styles //
+//=====================//
 .btn-custom {
   padding: 8px 32px;
   color: $white;
@@ -157,7 +186,9 @@ body {
       display: inline-block;
   }
 }
-// Button End //
+//=====================//
+// End Button Styles //
+//=====================//
 
 .logo {
   width: 100px;
@@ -189,7 +220,7 @@ body {
 // Feature //
 #feature {
   padding-top: 40px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   .col-12 {
     @include media-breakpoint-up(md) {
       border-left: 2px solid;
@@ -265,7 +296,27 @@ body {
 }
 // END Navigation
 
-// Footer //
+//=====================//
+// Skills Styles //
+//=====================//
+#skill {
+  height: 200px;
+  display: flex;
+  .col-12 {
+    justify-content: space-evenly;
+  }
+  .skill-icons {
+    width: 120px;
+    margin: 0 32px
+  }
+}
+//=====================//
+// End Skills Styles //
+//=====================//
+
+//=====================//
+// Footer Styles //
+//=====================//
 #footer {
   p{
     font-size: 14px;
@@ -273,4 +324,6 @@ body {
     padding-bottom: 40px;
   }
 }
-// End Footer //
+//=====================//
+// End Footer Styles //
+//=====================//
