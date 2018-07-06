@@ -248,6 +248,13 @@ body {
   background: rebeccapurple;
   margin-bottom: 20px; }
 
+.social {
+  display: block; }
+
+.social-icon {
+  height: 40px;
+  margin: 10px 30px 30px 0; }
+
 #footer p {
   font-size: 14px;
   padding-top: 40px;
