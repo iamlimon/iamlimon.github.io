@@ -16,14 +16,15 @@ $.fn.toggleClick = function(){
 
 $(function () {
     // cache the sliding object in a var
-    var slideout = $('#aside');
+    var slideout = $('.navigation');
     console.log(slideout);
     // "click-me" is what is in your html not "clickme"
-    $("#menuIcon").toggleClick(function () {
+    $(".menu").toggleClick(function () {
         console.log("clicked");
         // use cached object instead of searching
         slideout.animate({
-            left: '0px'
+            top: '96',
+            opacity: '1'
         }, {
             queue: false,
             duration: 200
@@ -31,10 +32,29 @@ $(function () {
     }, function () {
         // use cached object instead of searching        
         slideout.animate({
-            left: '-300'
+            top: '-183',
+            opacity: '0'
         }, {
             queue: false,
             duration: 200
         });
     });
+});
+
+$(".menu").mouseover(function() {
+    $("#line2").css('margin-left', '10px');
+    console.log("ya hovered.")
+});
+$(".menu").mouseout(function() {
+    $("#line2").css('margin-left', '0');
+    console.log("ya hovered.")
+});
+
+$(".nav-svg").mouseover(function() {
+    $(this).closest(".tooltip-container").css('visibility', 'visible');
+    console.log("FOO");
+});
+$(".menu").mouseout(function() {
+    $(this).closest(".tooltip-container").css('visibility', 'visible');
+    console.log("BAR");
 });
