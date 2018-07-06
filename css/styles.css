@@ -112,10 +112,12 @@
       background: rgba(0, 0, 0, 0.65); } }
   .navigation svg {
     display: block;
-    margin: 15px auto; }
+    margin: 0 auto; }
 
 .tooltip-container {
   background: #666;
+  color: #ffffff;
+  text-decoration: none;
   text-align: center;
   position: relative;
   left: -100px;

@@ -63,6 +63,7 @@
 //=====================//
 // End Header Styles //
 //=====================//
+
 //=====================//
 // Menu Styles //
 //=====================//
@@ -109,7 +110,7 @@
   };
    svg {
      display: block;
-     margin: 15px auto;
+     margin: 0 auto;
    }
  }
 //=====================//
@@ -119,12 +120,15 @@
 //Tool Tips //
 .tooltip-container {
   background: #666;
+  color: $white;
+  text-decoration: none;
   text-align: center;
   position: relative;
   left: -100px;
   top: -47px;
   visibility: hidden;
 }
+
 //=====================//
 // Profile Styles //
 //=====================//

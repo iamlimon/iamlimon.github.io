@@ -51,10 +51,10 @@ $(".menu").mouseout(function() {
 });
 
 $(".nav-svg").mouseover(function() {
-    $(this).closest(".tooltip-container").css('visibility', 'visible');
+    $(this).next().css('visibility', 'visible');
     console.log("FOO");
 });
-$(".menu").mouseout(function() {
-    $(this).closest(".tooltip-container").css('visibility', 'visible');
+$(".nav-svg").mouseout(function() {
+    $(this).next().css('visibility', 'hidden');
     console.log("BAR");
 });
