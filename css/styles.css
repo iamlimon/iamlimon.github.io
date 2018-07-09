@@ -231,22 +231,22 @@ body {
       font-weight: 300;
       text-transform: uppercase; }
 
-#skill {
-  height: 200px;
-  display: flex; }
-  #skill .col-12 {
-    justify-content: space-evenly; }
-  #skill .skill-icons {
-    width: 120px;
-    margin: 0 32px; }
+.skill-icons {
+  height: 58px; }
 
 #work {
   padding: 120px; }
 
 .work-row {
   padding: 30px 20px;
-  background: rebeccapurple;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background-color: #581845;
+  background-color: rgba(88, 24, 69, 0.6); }
+
+.work-link {
+  color: #ffffff;
+  width: 100%;
+  height: 100%; }
 
 .social {
   display: block; }
