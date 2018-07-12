@@ -97,8 +97,9 @@ a:hover {
     height: 4px;
     width: 45px;
     margin-top: 10px; }
-  .menuhover #line2 {
-    background: green; }
+
+#line2 {
+  transition: margin 400ms; }
 
 .navigation {
   background: black;
@@ -108,7 +109,8 @@ a:hover {
   right: 37px;
   top: -183;
   padding-top: 10px;
-  opacity: 0; }
+  opacity: 0;
+  display: none; }
   @media (min-width: 768px) {
     .navigation {
       right: 21px;
@@ -116,7 +118,9 @@ a:hover {
       background: rgba(0, 0, 0, 0.65); } }
   .navigation svg {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    height: 30px;
+    weight: 30px; }
 
 .tooltip-container {
   background: #666;
@@ -145,11 +149,12 @@ body {
   font-family: "futura-pt";
   background: #252525;
   color: #ffffff;
-  background: #11092e;
-  background: -moz-linear-gradient(90deg, #11092e 0%, #0e071f 100%);
-  background: -webkit-linear-gradient(90deg, #11092e 0%, #0e071f 100%);
-  background: linear-gradient(90deg, #11092e 0%, #0e071f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#11092e",endColorstr="#0e071f",GradientType=1); }
+  background: #141E30;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   body p {
     font-weight: 300;
     font-size: 24px; }
@@ -217,20 +222,6 @@ body {
       padding-left: 24px;
       font-size: 24px; } }
 
-.navigation ul {
-  list-style: none;
-  margin-top: 24px;
-  display: none; }
-  .navigation ul li {
-    display: inline;
-    padding: 10px;
-    text-align: right; }
-    .navigation ul li a {
-      color: #ffffff;
-      font-size: 20px;
-      font-weight: 300;
-      text-transform: uppercase; }
-
 .skill-icons {
   height: 58px; }
 
@@ -240,8 +231,8 @@ body {
 .work-row {
   padding: 30px 20px;
   margin-bottom: 20px;
-  background-color: #581845;
-  background-color: rgba(88, 24, 69, 0.6); }
+  background-color: #39ff14;
+  background-color: rgba(57, 255, 20, 0.3); }
 
 .work-link {
   color: #ffffff;

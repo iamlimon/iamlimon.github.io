@@ -86,11 +86,9 @@ a:hover {
     width: 45px;
     margin-top: 10px;
     }
-  &hover {
-    #line2 {
-      background: green;
-    }
-  }
+}
+#line2 {
+  transition: margin 400ms;
 }
 
 //=====================//
@@ -109,14 +107,17 @@ a:hover {
    top: -183;
    padding-top: 10px;
    opacity: 0;
+   display: none;
    @include media-breakpoint-up(md) { 
     right: 21px;
     width: 100px;
     background: rgba(0, 0, 0, 0.65);
-  };
+  }
    svg {
      display: block;
      margin: 0 auto;
+     height: 30px;
+     weight: 30px;
    }
  }
 //=====================//
@@ -166,12 +167,10 @@ body {
     font-family: $main-font;
     background: $gray;
     color: $white;
-    background: rgb(17,9,46);
-    background: -moz-linear-gradient(90deg, rgba(17,9,46,1) 0%, rgba(14,7,31,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(17,9,46,1) 0%, rgba(14,7,31,1) 100%);
-    background: linear-gradient(90deg, rgba(17,9,46,1) 0%, rgba(14,7,31,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#11092e",endColorstr="#0e071f",GradientType=1);
-    p {
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   p {
       font-weight: 300;
       font-size: 24px;
       span {
@@ -245,31 +244,6 @@ body {
 
 
 //=====================//
-// Navigation Styles //
-//=====================//
-.navigation {
-  ul{
-    list-style: none;
-    margin-top: 24px;
-    display: none;
-    li {
-      display: inline;
-      padding: 10px;
-      text-align: right;
-      a {
-        color: $white;
-        font-size: 20px;
-        font-weight: 300;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-//=====================//
-// End Navigation Styles //
-//=====================//
-
-//=====================//
 // Skills Styles //
 //=====================//
 .skill-icons {
@@ -288,7 +262,7 @@ body {
 .work-row {
   padding: 30px 20px;
   margin-bottom: 20px;
-  @include rgba-background(#581845  , 0.6);
+  @include rgba-background(#39ff14  , 0.3);
 }
 .work-link {
   color: $white;
