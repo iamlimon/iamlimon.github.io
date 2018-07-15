@@ -133,7 +133,10 @@ a:hover {
   visibility: hidden; }
 
 #profile {
-  padding: 100px 20px 20px; }
+  padding: 130px 20px 20px; }
+  @media (min-width: 768px) {
+    #profile {
+      padding: 200px 20px 20px; } }
   #profile h1 {
     font-weight: 300; }
   #profile p {
@@ -163,7 +166,9 @@ body {
       font-weight: bold; }
 
 .button {
-  display: inline-block;
+  display: block;
+  text-align: center;
+  width: 200px;
   background-color: transparent;
   color: #e6e4ec;
   overflow: visible;
@@ -180,6 +185,9 @@ body {
     .button {
       padding: 10px 30px;
       margin: 20px 40px 40px 0; } }
+
+.welcome-button {
+  display: inline-block; }
 
 .logo {
   width: 100px;

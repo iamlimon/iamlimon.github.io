@@ -140,7 +140,10 @@ a:hover {
 // Profile Styles //
 //=====================//
 #profile {
-  padding: 100px 20px 20px;
+  padding: 130px 20px 20px;
+  @include media-breakpoint-up(md) { 
+    padding: 200px 20px 20px;
+  };
   h1 {
     font-weight: 300;
   }
@@ -191,7 +194,9 @@ body {
 // Button Styles //
 //=====================//
 .button {
-  display: inline-block;
+  display: block;
+  text-align: center;
+  width: 200px;
   background-color: transparent;
   color: #e6e4ec;
   overflow: visible;
@@ -207,9 +212,11 @@ body {
   @include media-breakpoint-up(md) {
     padding: 10px 30px;
     margin: 20px 40px 40px 0;
-  };
- 
   }
+}
+.welcome-button {
+  display: inline-block;
+}
 //=====================//
 // End Button Styles //
 //=====================//
